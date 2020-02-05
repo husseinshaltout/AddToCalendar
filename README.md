@@ -9,6 +9,7 @@ To access your spreadsheet, you’ll need to create a service account and OAuth2
 - Name the service account and grant it a Project Role of Editor.
 - Download the JSON file.
 - Copy the JSON file to your code directory and rename it to client_secret.json
+- Find the  client_email inside client_secret.json. Back in your spreadsheet, click the Share button in the top right, and paste the client email into the People field to give it edit rights. Hit Send.
 #### OAuth Client ID
 - Go to https://console.developers.google.com/apis/credentials
 - Create credentials  
@@ -18,6 +19,7 @@ To access your spreadsheet, you’ll need to create a service account and OAuth2
 - Just add a name and save
 - Download the JSON file.
 - Copy the JSON file to your code directory and rename it to client_secret1.json
+
 ## Prerequisites
-pip install google-api-python-client
-pip install gspread oauth2client
+- pip install google-api-python-client
+- pip install gspread oauth2client
