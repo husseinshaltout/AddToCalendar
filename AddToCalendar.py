@@ -2,8 +2,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from apiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
-import pprint
-pp = pprint.PrettyPrinter()
+
 # use creds to create a client to interact with the Google Drive API
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
@@ -59,3 +58,4 @@ def setEvent(list_of_hashes,dd,cid):
                     End: %s'''%(recurring_event['summary'],
                     recurring_event['start']['dateTime'],recurring_event['end']['dateTime']))
                 return recurring_event    
+setEvent(list_of_hashes,dd,cid)         
