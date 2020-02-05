@@ -23,3 +23,7 @@ To access your spreadsheet, you’ll need to create a service account and OAuth2
 ## Prerequisites
 - pip install google-api-python-client
 - pip install gspread oauth2client
+### To be changed
+- replace SHEET NAME in `sheetName = "SHEET NAME"` with your google sheet name
+- change event starting dates in the date dictionary part `dd = {'SUN':'2020-02-09'` the date format: yyyy-mm-dd
+- `cid = {'Course 1':'9',}` choose course name and color id for the event color
