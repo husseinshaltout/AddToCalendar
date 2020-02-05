@@ -19,22 +19,13 @@ CAL = build("calendar", "v3", credentials=credentials)
 list_of_hashes = sheet.get_all_records()
 
 #Date dictionary
-dd = {'SUN':'09',
-      'MON':'10',
-      'TUE':'11', 
-      'WED':'12', 
-      'THU':'13'}        
+dd = {'SUN':'2020-02-09',
+      'MON':'2020-02-10',
+      'TUE':'2020-02-11', 
+      'WED':'2020-02-12', 
+      'THU':'2020-02-13'}        
 #Color id dictionary
-cid = {'CSCI221':'9',
-       'CSCI221T2':'9',
-       'CSCI221L1':'9',
-       'MATH205':'10',
-       'MATH205T2':'10',
-       'CSCI463':'11',
-       'CSCI463T':'11',
-       'CSCI463L':'11',
-       'CSCI467':'5',
-       'CSCI467T':'5'}
+cid = {'Course 1':'9',}
 def setEvent(list_of_hashes,dd,cid):
     GMT_OFF = '+02:00'
     for i in range(len(list_of_hashes)):
@@ -48,8 +39,8 @@ def setEvent(list_of_hashes,dd,cid):
                 color_id = cid[title]
                 event = {
                         'summary': title,
-                        'start':{'dateTime':'2020-02-%sT%s:00.000%s'%(ddate,start_time,GMT_OFF),'timeZone': 'Africa/Cairo'},
-                        'end':{'dateTime':'2020-02-%sT%s:00.000%s'%(ddate,end_time,GMT_OFF),'timeZone': 'Africa/Cairo'},
+                        'start':{'dateTime':'%sT%s:00.000%s'%(ddate,start_time,GMT_OFF),'timeZone': 'Africa/Cairo'},
+                        'end':{'dateTime':'%sT%s:00.000%s'%(ddate,end_time,GMT_OFF),'timeZone': 'Africa/Cairo'},
                         'recurrence': ['RRULE:FREQ=WEEKLY;UNTIL=20200705T170000Z',],
                         'colorId': color_id,}
                 recurring_event = CAL.events().insert(calendarId='primary', body=event).execute()
