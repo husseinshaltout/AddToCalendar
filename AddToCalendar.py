@@ -57,5 +57,5 @@ def setEvent(list_of_hashes,dd,cid):
                     Start: %s
                     End: %s'''%(recurring_event['summary'],
                     recurring_event['start']['dateTime'],recurring_event['end']['dateTime']))
-                return recurring_event    
-setEvent(list_of_hashes,dd,cid)         
+    return event    
+events = setEvent(list_of_hashes,dd,cid)         
