@@ -7,8 +7,8 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
 creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
 client = gspread.authorize(creds)
-
-sheet = client.open("Spring20 Schedule").sheet1
+sheetName = "SHEET NAME"
+sheet = client.open(sheetName).sheet1
 
 scopes = ['https://www.googleapis.com/auth/calendar']
 flow = InstalledAppFlow.from_client_secrets_file("client_secret1.json", scopes=scopes)
