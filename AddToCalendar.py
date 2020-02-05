@@ -24,7 +24,16 @@ dd = {'SUN':'09',
       'TUE':'11', 
       'WED':'12', 
       'THU':'13'}        
-
+#Color id dictionary
+cid = {'CSCI221':'',
+       'CSCI221T2':'',
+       'MATH205':'Basil',
+       'MATH205T1':'Basil',
+       'CSCI463':'Tomato',
+       'CSCI463T':'Tomato',
+       'CSCI463L':'Tomato',
+       'CSCI467':'',
+       'CSCI467T':''}
 #Test dictionary
 td = {'': 'SUN',
  '8:30': '',
