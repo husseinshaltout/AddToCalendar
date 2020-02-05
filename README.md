@@ -1,6 +1,7 @@
 # AddToCalendar
 A script to add my schedule from google sheets to google calendar using google APIs
 ![ref](https://user-images.githubusercontent.com/48390004/73819906-3338a300-47f9-11ea-9029-289142bdf4af.png)
+> Image of a sheet format for refrence
 ## Getting Started
 To access your spreadsheet, you’ll need to create a service account and OAuth2 credentials from the Google API Console
 - Go to the Google APIs Console.
